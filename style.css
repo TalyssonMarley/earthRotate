@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./img/espaçoBg.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.earth {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    background-image: url(/img/terra.png);
+    background-size: cover;
+    box-shadow: -10px -10px 15px #000 inset, 8px 10px 25px #fff inset, 0px 0px 20px #1f86fc ;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    to{background-position: 100%}
+}
+
+.moonOrbit {
+    width: 450px;
+    height: 450px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(0%, 0%);
+    animation: orbitRotate 20s linear infinite;
+}
+
+@keyframes orbitRotate {
+     100% {transform: translate(0%, 0%) rotate(360deg)}
+}
+
+.moon {
+    background-image: url(/img/moon.jpg);
+    width: 125px;
+    height: 125px;
+    background-position: center;
+    background-size: 200px;
+    border-radius: 50%;
+    box-shadow: -10px -10px 15px #000 inset, 0px 0px 20px #b3b2b2 ;
+    transform: translate(0%, 0%);
+    animation: moonRotate 20s linear infinite;
+}
+
+@keyframes moonRotate {
+    100%{
+        rotate: 360deg;
+    }
+}
+
+
